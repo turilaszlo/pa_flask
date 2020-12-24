@@ -1,8 +1,10 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route('/')
-def hello_world1():
-    return 'Hello Laszlo!'
+def hello_world():
+    return render_template('main_page.html')
+
+app.config["DEBUG"] = True
 

@@ -1,0 +1,128 @@
+{% extends 'base.html' %}
+
+{% block title%}Home{% endblock %}
+
+{% block content %}
+
+       <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                <!-- Masthead Avatar Image--><img class="masthead-avatar mb-5" src="assets/img/lturi.gif" alt="">
+                <!-- Masthead Heading-->
+                <h1 class="masthead-heading mb-0">python challenges</h1>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Masthead Subheading-->
+                <p class="pre-wrap masthead-subheading font-weight-light mb-0">coding for fun</p>
+            </div>
+        </header>
+        <section class="page-section portfolio" id="projects">
+            <div class="container">
+                <!-- Portfolio Section Heading-->
+                <div class="text-center">
+                    <h2 class="page-section-heading text-secondary mb-0 d-inline-block">projectlets</h2>
+                </div>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Grid Items-->
+                <div class="row justify-content-center">
+                    <!-- Portfolio Items-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-toggle="modal">
+                           <a class="btn-primary" title="eath healthy" href="/food">
+                           <img class="img-fluid" src="assets/img/portfolio/eat_healthy.png" alt="eath healthy"/>
+                           </a>
+                        </div>
+                    <h2 align="center">eat healthy</h2>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" >
+                            <img class="img-fluid" src="assets/img/portfolio/coming_later.png" alt="coming soon"/>
+                        </div>
+                        <h2 align="center">coming soon</h2>
+                    </div>
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" >
+                            <img class="img-fluid" src="assets/img/portfolio/coming_later.png" alt="coming later"/>
+                        </div>
+                    <h2 align="center">coming later</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section bg-primary text-white mb-0" id="about">
+            <div class="container">
+                <!-- About Section Heading-->
+                <div class="text-center">
+                    <h2 class="page-section-heading d-inline-block text-white">about</h2>
+                </div>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- About Section Content-->
+                <div class="row">
+                    <div class="col-lg-4 ml-auto">
+                        <p class="pre-wrap lead">My name is László Turi. I am an X-Gen digital immigrant in Central Europe.</p>
+                    </div>
+                    <div class="col-lg-4 mr-auto">
+                        <p class="pre-wrap lead">The projectlets are to keep my brain busy. Any freelance revenue is just an added bonus.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="page-section" id="contact">
+            <div class="container">
+                <!-- Contact Section Heading-->
+                <div class="text-center">
+                    <h2 class="page-section-heading text-secondary d-inline-block mb-0">contact</h2>
+                </div>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Contact Section Content-->
+                <div class="row justify-content-center">
+                    <div class="col-lg-4">
+                        <div class="d-flex flex-column align-items-center">
+                            <div class="icon-contact mb-3"><i class="far fa-envelope"></i></div>
+                            <div class="text-muted">Email</div><a class="lead font-weight-bold" href="mailto:turi.laszlo (@) ideateka.hu">turi.laszlo (@) ideateka.hu</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer text-center">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Location-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="mb-4">where</h4>
+                        <p class="pre-wrap lead mb-0"><a class="text-white" href="https://goo.gl/maps/4MjiJ2rRqcTeWwuY8">Cinkota, Budapest, Hungary</a></p>
+                    </div>
+                    <!-- Footer Social Icons-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="mb-4">who</h4><a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/laszloturi"><i class="fab fa-fw fa-linkedin-in"></i></a>
+                    </div>
+                    <!-- Footer About Text-->
+                    <div class="col-lg-4">
+                        <h4 class="mb-4">company</h4>
+                        <p class="pre-wrap lead mb-0"><a class="text-white" href="https://www.nemzeticegtar.hu/ideateka-kft-c0109931605.html">Ideatéka Kft. Reg.no: 01-09-931605. TaxID: HU11720805 </a></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+{% endblock %}

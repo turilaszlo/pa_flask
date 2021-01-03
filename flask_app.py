@@ -26,7 +26,7 @@ def food():
         foodDict.get("totCvits")<requestedCvit
         runX=runX+1
         foodDict=foodSelector(itemNo,calMax,cvitMin)
-        #print("runX: " + str(runX)+ "// totalCvit: " + str(foodDict.get("totCvits")))
+        #return render_template('food-wait.html',runX=str(runX))
         if foodDict.get("totCvits")>=(requestedCvit):
             return render_template('food.html',foodDict=foodDict,itemNo=itemNo,runX=str(runX))
 

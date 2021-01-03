@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title%}eath healthy{% endblock %}
+
+{% block content %}
+
+        <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                <!-- Masthead Heading-->
+                <h1 class="masthead-heading mb-0">eath healthy</h1>
+                <!-- Masthead Subheading-->
+                <p class="pre-wrap masthead-subheading font-weight-light mb-0">a 5-course random menu with min. total 3,000mg C-vitamin (min. 50mg/course) and max. 1000 calories per course.</p>
+            </div>
+        </header>
+        <section class="page-section portfolio" id="foodselector">
+            <div class="container">
+
+    <p>Random tries: {{ runX }} </p>
+    <table class="table">
+            <th class="table thead-light th">Food</th><th class="table thead-light th">Serving</th><th class="table thead-light th">Calories</th><th class="table thead-light th">Vitamin-C (mg)</th>
+
+            {% for item in range(0,itemNo) %}
+            <tr><td>{{ foodDict.Foods[item] }}</td><td>{{ foodDict.Sizes[item] }}</td><td align="right">{{ foodDict.Cals[item] }}</td><td align="right">{{ foodDict.Cvits[item] }}</td></tr>
+            {% endfor %}
+            <tr><td><b>Total:</b></td><td></td><td align="right"><b>{{foodDict.totCals}}</b></td><td align="right"><b>{{foodDict.totCvits}}</b></td></tr>
+      </table>
+
+            </div>
+
+
+{% endblock %}

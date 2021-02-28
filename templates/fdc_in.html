@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block title%}vegie finder{% endblock %}
+
+{% block content %}
+
+        <header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                <h1 class="masthead-heading mb-0">vegie finder</h1>
+                <p class="pre-wrap masthead-subheading font-weight-light mb-0">find the ideal vegetarian food</p>
+            </div>
+        </header>
+        <section class="page-section portfolio" id="foodselector">
+
+<div class="container py-5">
+    <div class="row">
+        <div class="col-md-10 mx-auto">
+            <form action="/fdc_in" method="POST">
+            <div class="form-group row">
+                <div class="col-sm-6">
+                    <label for="KcalInput">Energy (kcal/100g)</label>
+                    <select name="KcalInput" class="form-control">
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                        <option value="200">200</option>
+                        <option value="400">400</option>
+                        <option value="800">800</option>
+                    </select>
+                </div>
+                <div class="col-sm-6">
+                	<label for="minmaxKcalInput">preference</label>
+                	<select name="minmaxKcalInput" class="form-control">
+                        <option value="min">minimum</option>
+                        <option value="max">maximum</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-6">
+                	<label for="cvitInput">C-vitamin (mg/100g)</label>
+                    <select name="cvitInput" class="form-control">
+                        <option value="10">10</option>
+                        <option value="100">100</option>
+                        <option value="500">500</option>
+                        <option value="1000">1000</option>
+                        <option value="2000">2000</option>
+                    </select>
+                </div>
+                <div class="col-sm-6">
+                	<label for="minmaxCvitInput">preference</label>
+                	<select name="minmaxCvitInput" class="form-control">
+                        <option value="min">minimum</option>
+                        <option value="max">maximum</option>
+                    </select>
+                </div>
+             </div>
+            <div class="form-group row">
+                <div class="col-sm-6">
+                    <label for="itemInput">Items to list randomly</label>
+                	<select name="itemInput" class="form-control">
+                        <option value="1">1</option>
+                        <option value="5">5</option>
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="40">40</option>
+                    </select>
+                </div>
+            </div>
+            	<input type="submit" value="Submit"  class="btn btn-primary"/>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

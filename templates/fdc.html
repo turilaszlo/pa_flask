@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title%}vegie finder{% endblock %}
+
+{% block content%}
+
+<header class="masthead bg-primary text-white text-center">
+            <div class="container d-flex align-items-center flex-column">
+                <h1 class="masthead-heading mb-0">vegie finder</h1>
+                <p class="pre-wrap masthead-subheading font-weight-light mb-0">vegie food with {{minmaxKcal}}. {{ Kcal }} kcal and {{minmaxCvit}}. {{cvit}}mg C-vitamin in each per 100g</p>
+            </div>
+        </header>
+        <section class="page-section portfolio" id="foodselector">
+            <div class="container">
+            <table class="table">
+                <th class="table thead-light th">Food (random {{itemNo}} out of {{fdcDict['rowNo']}})</th>
+                <th class="table thead-light th">Energy (kcal)</th>
+                <th class="table thead-light th">C&nbsp;vitamin (mg)</th>
+                <th class="table thead-light th">Sugar (g)</th>
+                {% for item in range(0,itemNo) %}
+                <tr><td>{{ fdcDict.Foods[item] }}</td>
+                <td align="right">{{ fdcDict.Cals[item] }}</td>
+                <td align="right">{{ fdcDict.Cvit[item] }}</td>
+                <td align="right">{{ fdcDict.Sugar[item] }}</td></tr>
+            {% endfor %}
+            </table>
+<!--<tr><td><b>Total:</b></td><td align="right"><b>{{fdcDict.totCals}}</b></td></tr> -->
+
+<a href="/fdc_in" class="btn btn-primary" role="button">new search</a> <a href="/fdc/{{itemNo}}/{{Kcal}}/{{cvit}}/{{minmaxKcal}}/{{minmaxCvit}}" class="btn btn-primary" role="button">other random {{itemNo}}</a>
+
+<div class="container">
+
+    <p align="center" style="small"><a href="https://fdc.nal.usda.gov/">Data source: U.S. Department of Agriculture</a></p>
+</div>
+
+
+{% endblock %}
